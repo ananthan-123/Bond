@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>BOND INVSTR | Online Platform Login</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -145,6 +147,20 @@
       .carousel-indicators .active {
         background-color: #ffffff;
       }
+      @media screen and (max-width: 992px) {
+        .login-content {
+          margin-top: 30px !important;
+          justify-content: center;
+          display: flex;
+          padding-left: 20px !important;
+        }
+        .carousel-item img {
+          height: 500px;
+        }
+        .image-cont {
+          height: 500px;
+        }
+      }
 
       .login-content {
         padding-left: 180px;
@@ -173,7 +189,7 @@
   <body>
     <div class="container-fluid">
       <div class="row align-items-center login-container">
-        <div class="col-lg-6 p-0">
+        <div class="col-lg-6 p-0 image-cont">
           <div
             id="carouselExampleIndicators"
             class="carousel slide"
