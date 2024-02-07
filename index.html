@@ -38,7 +38,7 @@
       }
       .disclaimer {
         opacity: 0.502;
-        width: 450px;
+        max-width: 450px;
         height: 70px;
         font-size: 9px;
         line-height: 14px;
@@ -47,7 +47,7 @@
         margin-top: 150px;
       }
       input {
-        width: 347px !important;
+        max-width: 347px !important;
         height: 50px !important;
         border-radius: 10px !important;
         background-color: #ffffff !important;
@@ -112,7 +112,7 @@
       .carousel-caption {
         position: absolute;
         left: 15%;
-        bottom: 15%;
+        /* bottom: 10%; */
         right: 15%;
         z-index: 10;
         text-align: left;
@@ -149,6 +149,7 @@
       }
       @media screen and (max-width: 992px) {
         .login-content {
+          margin: auto;
           margin-top: 30px !important;
           justify-content: center;
           display: flex;
@@ -159,6 +160,32 @@
         }
         .image-cont {
           height: 500px;
+        }
+        .disclaimer {
+          margin-top: 100px !important;
+        }
+        .carousel-indicators {
+          bottom: 0% !important;
+          left: -8% !important;
+        }
+        .carousel-caption {
+          left: 7%;
+        }
+        .carousel-caption h5 {
+          width: 300px;
+          height: auto;
+          font-size: 32px;
+          line-height: 38px;
+          color: #ffffff;
+          font-weight: 300;
+        }
+        .carousel-caption p {
+          width: fit-content;
+          height: auto;
+          font-size: 16px;
+          line-height: 24px;
+          color: #ffffff;
+          font-weight: 300;
         }
       }
 
@@ -217,7 +244,7 @@
                   class="d-block w-100"
                   alt="..."
                 />
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption">
                   <h5>Your Gateway to the Global Bond Market</h5>
                   <p>
                     Access a world-class platform designed for efficiency in the
@@ -232,7 +259,7 @@
                   class="d-block w-100"
                   alt="..."
                 />
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption">
                   <h5>Real-Time Market Insights</h5>
                   <p>
                     Stay ahead in the market with real-time data and insights.
@@ -248,7 +275,7 @@
                   class="d-block w-100"
                   alt="..."
                 />
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption">
                   <h5>Intuitive Tools for Market Analysis</h5>
                   <p>
                     Navigate the complexities of the bond market with ease. Our
@@ -263,7 +290,7 @@
         </div>
 
         <div class="col-md-6 login-content">
-          <div class="d-flex flex-column">
+          <div class="d-flex flex-column" style="width: 100%;">
             <!-- Logo -->
             <img
               src="assets/images/logo.svg"
