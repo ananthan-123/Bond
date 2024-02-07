@@ -49,12 +49,20 @@
         height: 50px !important;
         border-radius: 10px !important;
         background-color: #ffffff !important;
-        border: 1px solid #258de9 !important;
+        border: 1px solid #f5f5f7 !important;
         font-size: 14px !important;
         line-height: 18px !important;
         color: #262d33 !important;
         font-weight: 300 !important;
+        outline: none !important;
+        padding: 10px 20px !important;
       }
+
+      input:focus {
+        border: 1px solid #258de9 !important;
+        box-shadow: none !important;
+      }
+
       .form-group {
         margin-bottom: 20px !important;
       }
@@ -156,6 +164,10 @@
         color: #ff0000;
         font-weight: 300;
       }
+
+      .input-error {
+        border: 1px solid #ff0000 !important; /* Keeping !important only here to override the existing styles */
+      }
     </style>
   </head>
   <body>
@@ -250,7 +262,7 @@
                   type="email"
                   class="form-control"
                   id="emailAddress"
-                  placeholder="Enter your email"
+                  placeholder="Input Your E-mail Address"
                 />
               </div>
               <div class="form-group">
@@ -259,7 +271,7 @@
                   type="password"
                   class="form-control"
                   id="password"
-                  placeholder="Enter your password"
+                  placeholder="Input Your Password"
                 />
               </div>
 
@@ -320,6 +332,10 @@
             // Show error message
             var errorMessage = document.getElementById("errorMessage");
             errorMessage.style.display = "block";
+            document
+              .getElementById("emailAddress")
+              .classList.add("input-error");
+            document.getElementById("password").classList.add("input-error");
           }, 2000);
         });
     </script>
