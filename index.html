@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>BOND INVSTR | Online Platform Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <style>
+      body {
+        font-family: "Inter" !important;
+      }
+      /* Custom styles */
+      .login-container {
+        min-height: 100vh;
+      }
+      .brand-logo {
+        max-width: 200px;
+        margin-bottom: 60px;
+      }
+      .login-form {
+        max-width: 400px;
+      }
+      .login-button {
+        width: 100%;
+      }
+      .disclaimer {
+        opacity: 0.502;
+        width: 450px;
+        height: 70px;
+        font-size: 9px;
+        line-height: 14px;
+        color: #9c9ca4;
+        font-weight: 300;
+        margin-top: 150px;
+      }
+      input {
+        width: 347px !important;
+        height: 50px !important;
+        border-radius: 10px !important;
+        background-color: #ffffff !important;
+        border: 1px solid #258de9 !important;
+        font-size: 14px !important;
+        line-height: 18px !important;
+        color: #262d33 !important;
+        font-weight: 300 !important;
+      }
+      .form-group {
+        margin-bottom: 20px !important;
+      }
+      button {
+        width: 133px !important;
+        height: 40px !important;
+        border-radius: 20px !important;
+        background-color: #258de9 !important;
+        border: 1px solid #258de9 !important;
+      }
+      .label {
+        font-size: 14px !important;
+        line-height: 21px !important;
+        color: #141522 !important;
+        font-weight: 600 !important;
+      }
+
+      .carousel-item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0.9999999999999999) 100%
+        );
+        z-index: 1;
+      }
+
+      .carousel-item {
+        position: relative;
+        /* Adjust the path to your actual image */
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0.9999999999999999) 100%
+        );
+      }
+      .carousel-item img {
+        height: 100vh;
+      }
+      .carousel-caption {
+        position: absolute;
+        left: 15%;
+        bottom: 15%;
+        right: 15%;
+        z-index: 10;
+        text-align: left;
+      }
+      .carousel-caption h5 {
+        width: 410px;
+        height: 126px;
+        font-size: 42px;
+        line-height: 63px;
+        color: #ffffff;
+        font-weight: 300;
+      }
+
+      .carousel-caption p {
+        width: 595px;
+        height: 72px;
+        font-size: 16px;
+        line-height: 24px;
+        color: #ffffff;
+        font-weight: 300;
+      }
+      .carousel-indicators {
+        bottom: 10% !important;
+        justify-content: left !important;
+      }
+      .carousel-indicators li {
+        display: inline-block;
+        width: 30px;
+        height: 2px;
+        background-color: #9c9ca4;
+      }
+      .carousel-indicators .active {
+        background-color: #ffffff;
+      }
+
+      .login-content {
+        padding-left: 180px;
+      }
+
+      .spinner-border {
+        display: none; /* Hide spinner initially */
+        margin-bottom: 10px;
+      }
+      .error-message {
+        display: none; /* Hide error message initially */
+        margin-bottom: 20px;
+        opacity: 0.8;
+        width: 450px;
+        font-size: 9px;
+        line-height: 14px;
+        color: #ff0000;
+        font-weight: 300;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row align-items-center login-container">
+        <div class="col-lg-6 p-0">
+          <div
+            id="carouselExampleIndicators"
+            class="carousel slide"
+            data-ride="carousel"
+          >
+            <ol class="carousel-indicators">
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="0"
+                class="active"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="1"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="2"
+              ></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="assets/images/car1.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Your Gateway to the Global Bond Market</h5>
+                  <p>
+                    Access a world-class platform designed for efficiency in the
+                    international bond market. Discover opportunities across the
+                    globe with our comprehensive bond market screening tools.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="assets/images/car2.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Real-Time Market Insights</h5>
+                  <p>
+                    Stay ahead in the market with real-time data and insights.
+                    Bond Invstr provides up-to-the-minute information, helping
+                    you to quickly identify and capitalize on emerging
+                    opportunities in the global bond market.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="assets/images/car3.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Intuitive Tools for Market Analysis</h5>
+                  <p>
+                    Navigate the complexities of the bond market with ease. Our
+                    user-friendly interface and advanced analytical tools
+                    empower both professionals and private investors to make
+                    informed decisions.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 login-content">
+          <div class="d-flex flex-column">
+            <!-- Logo -->
+            <img
+              src="assets/images/logo.svg"
+              alt="BOND INVSTR Logo"
+              class="brand-logo"
+            />
+            <!-- Login Form -->
+            <form class="login-form" id="loginForm">
+              <div class="form-group">
+                <label for="emailAddress" class="label">Email Address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="emailAddress"
+                  placeholder="Enter your email"
+                />
+              </div>
+              <div class="form-group">
+                <label for="password" class="label">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="Enter your password"
+                />
+              </div>
+
+              <!-- Spinner -->
+              <div
+                id="spinner"
+                class="spinner-border text-primary"
+                role="status"
+              >
+                <span class="sr-only">Loading...</span>
+              </div>
+
+              <!-- Error Message -->
+              <div id="errorMessage" class="error-message">
+                Oops! The username or password you entered is incorrect.
+              </div>
+
+              <button type="submit" class="btn btn-primary login-button">
+                Sign In
+              </button>
+            </form>
+
+            <!-- Disclaimer -->
+            <p class="text-left disclaimer">
+              The information provided on the Bond Invstr platform, including
+              all tools, features, and content, is for informational purposes
+              only. It does not constitute financial, investment, legal, or
+              other professional advice. Bond Invstr does not guarantee the
+              accuracy, completeness, or timeliness of the information provided
+              and is not responsible for any errors or omissions, or for the
+              results obtained from the use of this information.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script>
+      // JavaScript for handling form submission
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent form submission
+
+          // Show spinner
+          var spinner = document.getElementById("spinner");
+          spinner.style.display = "block";
+
+          // Simulate a network request
+          setTimeout(function () {
+            // Hide spinner
+            spinner.style.display = "none";
+
+            // Show error message
+            var errorMessage = document.getElementById("errorMessage");
+            errorMessage.style.display = "block";
+          }, 2000);
+        });
+    </script>
+  </body>
+</html>
